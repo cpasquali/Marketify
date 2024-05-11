@@ -40,8 +40,6 @@ export const Products = () => {
             </div>
           </article>
         ))}
-
-        
     </section>
   )
 }
