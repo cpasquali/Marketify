@@ -7,8 +7,6 @@ import { Switch, Route } from "wouter";
 
 function App() {
 
-  const [search, setSearch] = useState();
-
   return (
     <>
       <NavBar />
