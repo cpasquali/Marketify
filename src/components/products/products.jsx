@@ -1,32 +1,10 @@
-import { useState,useEffect } from 'react'
 import "./products.css"
 import { Link } from 'wouter';
+import { useProducts } from '../../hooks/use-products-hook';
 
 export const Products = () => {
 
-    const [data, setData] = useState([]);
-    const [loading, setLoading ] = useState(true)
-    const apiUrl = "https://fakestoreapi.com/products";
-
-    const getData = async () => {
-       
-        try{
-            const response = await fetch(apiUrl)
-            if(!response.ok){
-                console.error("se encontro un error")
-            }
-            const dataApi = await response.json()
-            setData(dataApi)
-            setLoading(false)
-            console.log(data)
-        }catch(error){
-            console.error("error al cargar la data")
-        }
-    }
-
-    useEffect(()=>{
-        getData()
-    }, [])
+    const {data} = useProducts();
 
   return (
     <section className="container">
