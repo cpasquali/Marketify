@@ -16,19 +16,16 @@ export const NavBar = () => {
                             <li className="nav-item">
                                 <Link to={"/"} className="nav-link active" aria-current="page">Home</Link>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Link</a>
-                            </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categories
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Jewelery</a></li>
-                                    <li><a className="dropdown-item" href="#">Electronics</a></li>
+                                    <li><Link to="/products/category/jewelery" className="dropdown-item">Jewelery</Link></li>
+                                    <li><Link to="/products/category/electronics" className="dropdown-item">Electronics</Link></li>
                                     <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="#">Men's Clothing</a></li>
-                                    <li><a className="dropdown-item" href="#">Women's Clothing</a></li>
+                                    <li><Link to="/products/category/men's clothing" className="dropdown-item">Men's Clothing</Link></li>
+                                    <li><Link to="/products/category/women's clothing" className="dropdown-item">Women's Clothing</Link></li>
                                 </ul>
                             </li>
                         </ul>
