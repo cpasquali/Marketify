@@ -23,6 +23,8 @@ export const ProductDetails = ({params}) => {
     } catch (error) {
       console.error("Error al cargar la data:", error);
       setDataExist(false);
+    }
+    finally{
       setIsLoading(false)
     }
   }

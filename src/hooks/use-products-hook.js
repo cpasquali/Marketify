@@ -16,9 +16,11 @@ const useProducts = () => {
                 }
                 const dataApi = await response.json();
                 setData(dataApi)
-                setIsloading(false)
             } catch (error) {
                 console.log("error al trael")
+            }
+            finally{
+                setIsloading(false)
             }
         };
 

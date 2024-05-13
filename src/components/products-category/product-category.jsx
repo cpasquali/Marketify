@@ -19,9 +19,11 @@ export const ProductCategory = ({ params }) => {
             }
             const dataApi = await response.json();
             setDataId(dataApi);
-            setIsLoading(false);
         } catch (error) {
             console.error("Error al cargar la data:", error);
+        }
+        finally{
+            setIsLoading(false);
         }
     };
     
