@@ -4,11 +4,12 @@ import { Link } from 'wouter';
 
 export const ProductDetails = ({params}) => {
   const {id} = params;
-
+  const [isLoading, setIsLoading] = useState(false)
   const [dataId, setDataId] = useState({});
   const apiUrl = `https://fakestoreapi.com/products/${id}`;
 
   const getDataById = async () => {
+    setIsLoading(true)
     try {
       const response = await fetch(apiUrl);
       if (!response.ok) {
@@ -17,6 +18,7 @@ export const ProductDetails = ({params}) => {
       }
       const dataApi = await response.json();
       setDataId(dataApi);
+      setIsLoading(false)
     } catch (error) {
       console.error("Error al cargar la data:", error);
     }
@@ -25,6 +27,12 @@ export const ProductDetails = ({params}) => {
   useEffect(() => {
     getDataById();
   }, []);
+
+  if(isLoading){
+    return(
+      <h2 className="container loading">Cargando.....</h2>
+    );
+  }
 
   return (
     <section className="container">

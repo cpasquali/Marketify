@@ -101,4 +101,27 @@
       margin-top: 90px;
     }
   }
+
+  .container.loading{
+    color: white;
+}
+
+@keyframes loadingAnimation {
+    0% {
+      opacity: 0.5;
+      transform: scale(0.9);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 0.5;
+      transform: scale(0.9);
+    }
+  }
+  
+  .loading {
+    animation: loadingAnimation 1s ease-in-out infinite;
+  }
   
