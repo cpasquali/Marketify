@@ -4,7 +4,13 @@ import { useProducts } from '../../hooks/use-products-hook';
 
 export const Products = () => {
 
-    const {data} = useProducts();
+    const {data, isLoading} = useProducts();
+
+  if (isLoading) {
+    return (
+        <h2 className="container loading">Loading page...</h2>
+    );
+  }
 
   return (
     <section className="container">

@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 
 const useProducts = () => {
     const [data, setData] = useState([]);
+    const [isLoading, setIsloading] = useState(true)
     const apiUrl = "https://fakestoreapi.com/products";
     
 
         const getData = async () => {
+            setIsloading(true)
             try {
                 const response = await fetch(apiUrl);
                 if (!response.ok) {
@@ -14,6 +16,7 @@ const useProducts = () => {
                 }
                 const dataApi = await response.json();
                 setData(dataApi)
+                setIsloading(false)
             } catch (error) {
                 console.log("error al trael")
             }
@@ -23,7 +26,7 @@ const useProducts = () => {
         getData();
     }, [])
 
-    return { data, getData };
+    return { data, getData, isLoading };
 };
 
 export { useProducts };

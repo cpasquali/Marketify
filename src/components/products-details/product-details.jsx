@@ -4,7 +4,7 @@ import { Link } from 'wouter';
 
 export const ProductDetails = ({params}) => {
   const {id} = params;
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const [dataId, setDataId] = useState({});
   const apiUrl = `https://fakestoreapi.com/products/${id}`;
 
@@ -30,7 +30,7 @@ export const ProductDetails = ({params}) => {
 
   if(isLoading){
     return(
-      <h2 className="container loading">Cargando.....</h2>
+      <h2 className="container loading">Loading...</h2>
     );
   }
 
