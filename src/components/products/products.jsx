@@ -25,5 +25,6 @@ export const Products = () => {
           </article>
         ))}
     </section>
+    
   )
 }
