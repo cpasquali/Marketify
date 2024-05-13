@@ -102,9 +102,10 @@
     }
   }
 
-  .container.loading{
+  .container.loading, .container.error{
     color: white;
 }
+
 
 @keyframes loadingAnimation {
     0% {
