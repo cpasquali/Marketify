@@ -4,8 +4,8 @@ import { Link } from 'wouter';
 export const NavBar = () => {
 
     return (
-        <header className="position-fixed">
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <header>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary position-fixed">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">Marketify</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

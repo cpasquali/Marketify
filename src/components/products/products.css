@@ -1,9 +1,9 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    gap: 1rem;
     justify-content: center;
-    gap: 20px;
+    margin-bottom: 2rem;
 }
 
 .card {
@@ -15,11 +15,12 @@
     height: 450px;
     padding: 10px;
     margin-top: 80px;
-    margin-bottom: -32px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    margin-bottom: -32px;
+
 }
 
 .card:hover {

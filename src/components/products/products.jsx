@@ -1,6 +1,6 @@
-import "./products.css"
 import { Link } from 'wouter';
 import { useProducts } from '../../hooks/use-products-hook';
+import './products.css'
 
 export const Products = () => {
 
@@ -13,7 +13,7 @@ export const Products = () => {
   }
 
   return (
-    <section className="container">
+        <section className="container">
         {data.map((product) => (
             <article key={product.id} className="card" style={{width: "18rem"}}>
                 <img src={product.image} className="card-img-top" alt="..." />
@@ -25,6 +25,5 @@ export const Products = () => {
           </article>
         ))}
     </section>
-    
   )
 }
