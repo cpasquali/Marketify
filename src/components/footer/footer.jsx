@@ -11,8 +11,8 @@ export const Footer = () => {
       <div className="footer-section">
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:info@example.com">info@example.com</a></li>
-          <li><a href="tel:+1234567890">+1 234 567 890</a></li>
+          <li><a href="mailto:marketify@example.com">marketify@example.com</a></li>
+          <li><a href="tel:+1234567890">+54 307416422</a></li>
         </ul>
       </div>
       <div className="footer-section">
