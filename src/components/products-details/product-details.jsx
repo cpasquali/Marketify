@@ -35,8 +35,8 @@ export const ProductDetails = ({params}) => {
 
   if(isLoading){
     return(
-      <div class="loading-screen">
-        <div class="spinner"></div>
+      <div className="loading-screen">
+        <div className="spinner"></div>
       </div>
     );
   }
