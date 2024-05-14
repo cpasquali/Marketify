@@ -6,7 +6,7 @@ export const Footer = () => {
     <div className="footer-container bg-body-tertiary">
       <div className="footer-section">
         <h4>About Us</h4>
-        <p>Learn more about our company and our mission.</p>
+        <p>Discover top-quality products at great prices. Enjoy fast shipping and excellent customer service. Shop now!.</p>
       </div>
       <div className="footer-section">
         <h4>Contact</h4>

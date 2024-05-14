@@ -20,7 +20,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     margin-bottom: -32px;
-
+    z-index: 0;
 }
 
 .card:hover {
