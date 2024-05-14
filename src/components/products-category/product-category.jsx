@@ -33,7 +33,9 @@ export const ProductCategory = ({ params }) => {
     
     if (isLoading) {
         return (
-            <h2 className="container loading">Loading...</h2>
+            <div class="loading-screen">
+        <div class="spinner"></div>
+      </div>
         );
     }
 

@@ -8,7 +8,9 @@ export const Products = () => {
 
   if (isLoading) {
     return (
-        <h2 className="container loading">Loading page...</h2>
+      <div class="loading-screen">
+      <div class="spinner"></div>
+    </div>
     );
   }
 
