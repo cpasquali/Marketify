@@ -38,7 +38,19 @@ export const NavBar = () => {
               <li className="nav-item">
                 <Link to={"/"} className="nav-link active" aria-current="page">Home</Link>
               </li>
-              <li className="nav-item dropdown" onClick={handleOpacityNav}>
+              <li className="nav-item dropdown movil">
+                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul className="dropdown-menu">
+                  <li><Link to="/products/category/jewelery" className="dropdown-item">Jewelery</Link></li>
+                  <li><Link to="/products/category/electronics" className="dropdown-item">Electronics</Link></li>
+                  <li><hr className="dropdown-divider" /></li>
+                  <li><Link to="/products/category/men's clothing" className="dropdown-item">Men's Clothing</Link></li>
+                  <li><Link to="/products/category/women's clothing" className="dropdown-item">Women's Clothing</Link></li>
+                </ul>
+              </li>
+              <li className="nav-item dropdown pc" onClick={() => handleOpacityNav(true)}>
                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Categories
                 </a>

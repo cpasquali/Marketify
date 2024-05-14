@@ -17,3 +17,16 @@
   z-index: 1;
   }
 
+.movil{
+  display: none;
+}
+
+@media (width <= 768px){
+  .movil{
+    display: block;
+  }
+  .pc{
+    display: none;
+  }
+}
+
