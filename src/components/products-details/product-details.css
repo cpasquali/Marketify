@@ -2,12 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  padding: 20px;
 }
 
 .product img {
- width: 30%;
+  margin-top: 50px;
+  width: 30%;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -28,8 +27,6 @@
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
-  margin-bottom: 50px;
   max-width: 400px;
   text-align: center;
 }

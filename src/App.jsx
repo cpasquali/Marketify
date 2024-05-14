@@ -4,6 +4,7 @@ import { ProductDetails } from './components/products-details/product-details';
 import { Products } from './components/products/products';
 import { Switch, Route } from "wouter";
 import { ProductCategory } from './components/products-category/product-category';
+import { Footer } from './components/footer/footer.jsx';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/products/:id" component={ProductDetails}/>
         <Route path="/products/category/:category" component={ProductCategory}/>
       </Switch>
+      <Footer />
     </>
   );
 }
