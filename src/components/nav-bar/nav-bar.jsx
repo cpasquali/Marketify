@@ -7,7 +7,7 @@ export const NavBar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
+    if (window.scrollY > lastScrollY && window.scrollY > 50) {
       setIsVisible(false);
     } else {
       setIsVisible(true);
@@ -28,7 +28,6 @@ export const NavBar = () => {
         <div className="container-fluid">
           <a className="navbar-brand" href="#">Marketify</a>
           <button
-            onClick={() => setIsVisible(!isVisible)}
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
