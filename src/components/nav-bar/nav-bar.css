@@ -7,6 +7,10 @@
   opacity: 0.2;
 }
 
+.navbar-container:hover{
+  opacity: 1;
+}
+
 .navbar {
   background-color: #f8f9fa;
 }
