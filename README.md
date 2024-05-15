@@ -1,8 +1,10 @@
-# React + Vite
+# Marketify
+### Marketify es un proyecto de E-commerce que permite a los usuarios explorar una variedad de productos y obtener información detallada sobre cada uno de ellos. Al hacer clic en un producto, el usuario es redirigido a una página separada donde se muestra información detallada del producto seleccionado.
+## Tecnologias Utilizadas
+### HTML
+### CSS
+### JavaScript
+### React
+## Bootstrap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
