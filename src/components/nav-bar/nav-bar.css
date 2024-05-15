@@ -1,36 +1,31 @@
 .navbar-container {
   width: 100%;
-  transition: opacity 0.5s ease;
+  transition: top 0.3s ease-in-out;
 }
 
-.header-opacity {
-  opacity: 0.2;
+.navbar-hidden {
+  top: -70px;
 }
 
-.navbar-container:hover{
-  opacity: 1;
-}
-
-.navbar {
-  background-color: #f8f9fa;
+.navbar-visible {
+  top: 0;
 }
 
 .position-fixed {
-  display: block;
-  width: 100%; 
+  position: fixed;
+  width: 100%;
   z-index: 1;
-  }
+}
 
-.movil{
+.movil {
   display: none;
 }
 
-@media (width <= 768px){
-  .movil{
+@media (max-width: 768px) {
+  .movil {
     display: block;
   }
-  .pc{
+  .pc {
     display: none;
   }
 }
-
