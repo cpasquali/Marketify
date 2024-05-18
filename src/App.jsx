@@ -7,17 +7,18 @@ import { ProductCategory } from './components/products-category/product-category
 import { Footer } from './components/footer/footer.jsx';
 
 function App() {
-
   return (
-    <>
+    <div className="app-container">
       <NavBar />
-      <Switch>
-        <Route path="/" component={Products}/>
-        <Route path="/products/:id" component={ProductDetails}/>
-        <Route path="/products/category/:category" component={ProductCategory}/>
-      </Switch>
+      <main className="main-content">
+        <Switch>
+          <Route path="/" component={Products}/>
+          <Route path="/products/:id" component={ProductDetails}/>
+          <Route path="/products/category/:category" component={ProductCategory}/>
+        </Switch>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

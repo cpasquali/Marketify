@@ -2,15 +2,15 @@ import { useState, useEffect } from 'react';
 import "./product-details.css";
 import { Link } from 'wouter';
 
-export const ProductDetails = ({params}) => {
-  const {id} = params;
-  const [isLoading, setIsLoading] = useState(true)
-  const [dataExist, setDataExist] = useState(true)
+export const ProductDetails = ({ params }) => {
+  const { id } = params;
+  const [isLoading, setIsLoading] = useState(true);
+  const [dataExist, setDataExist] = useState(true);
   const [dataId, setDataId] = useState({});
   const apiUrl = `https://fakestoreapi.com/products/${id}`;
 
   const getDataById = async () => {
-    setIsLoading(true)
+    setIsLoading(true);
     try {
       const response = await fetch(apiUrl);
       if (!response.ok) {
@@ -19,29 +19,28 @@ export const ProductDetails = ({params}) => {
       }
       const dataApi = await response.json();
       setDataId(dataApi);
-      setIsLoading(false)
+      setIsLoading(false);
     } catch (error) {
       console.error("Error al cargar la data:", error);
       setDataExist(false);
+    } finally {
+      setIsLoading(false);
     }
-    finally{
-      setIsLoading(false)
-    }
-  }
+  };
 
   useEffect(() => {
     getDataById();
   }, []);
 
-  if(isLoading){
-    return(
+  if (isLoading) {
+    return (
       <div className="loading-screen">
         <div className="spinner"></div>
       </div>
     );
   }
-  
-  if(!dataExist){
+
+  if (!dataExist) {
     return (
       <h2 className="container error">Error we could not find the product..😥</h2>
     );
@@ -63,4 +62,4 @@ export const ProductDetails = ({params}) => {
       </article>
     </section>
   );
-}
+};
