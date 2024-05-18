@@ -10,16 +10,15 @@ export const ProductDetails = ({ params }) => {
   const apiUrl = `https://fakestoreapi.com/products/${id}`;
 
   const getDataById = async () => {
-    setIsLoading(true);
     try {
       const response = await fetch(apiUrl);
       if (!response.ok) {
         console.error("Se encontró un error");
+        setDataExist(false);
         return;
       }
       const dataApi = await response.json();
       setDataId(dataApi);
-      setIsLoading(false);
     } catch (error) {
       console.error("Error al cargar la data:", error);
       setDataExist(false);
@@ -27,6 +26,7 @@ export const ProductDetails = ({ params }) => {
       setIsLoading(false);
     }
   };
+  
 
   useEffect(() => {
     getDataById();
